@@ -31,7 +31,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/docs') }}">Documentation</a>
+                        <a class="nav-link" target="_blank" href="{{ url('/api/documentation') }}">Documentation</a>
                     </li>
                 </ul>
             </div>

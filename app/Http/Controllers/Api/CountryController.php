@@ -10,10 +10,47 @@ use App\Msg;
 
 class CountryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
+     /**
+     * @api {get} /api/v1/countries Get list of all countries
+     * @apiVersion 0.1.0
+     * @apiName IndexCountries
+     * @apiGroup Countries
      *
-     * @return \Illuminate\Http\Response
+     * @apiSuccess {Number} code  Código 0 conforme todo ha ido bien.
+     * @apiSuccess {Bool} true/false  True o false dependiendo del resultado.
+     *
+     * @apiSuccessExample Success-Response:
+     *     HTTP/1.1 200 OK
+     *     {
+     *        "message": "Countries list",
+     *        "data": [
+     *          {
+     *            "id": 1,
+     *            "code": "PE",
+     *            "name": "Perú"
+     *          },
+     *          {
+     *            "id": 2,
+     *            "code": "VE",
+     *            "name": "Venezuela"
+     *          },
+     *          {
+     *            "id": 3,
+     *            "code": "EC",
+     *            "name": "Ecuador"
+     *          }
+     *        ],
+     *        "status": true,
+     *        "code": 202
+     *      }
+     *
+     * @apiError CountriesNotFound No countries found.
+     *
+     * @apiErrorExample Error-Response:
+     *     HTTP/1.1 404 Not Found
+     *     {
+     *       "error": "Error countries found"
+     *     }
      */
     public function index()
     {

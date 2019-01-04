@@ -1,0 +1,7 @@
+{
+  "name": "ApiHotels",
+  "version": "0.1.0",
+  "description": "Api for HotelsBooking",
+  "title": "Title description",
+  "url" : "https://api.hotels.com/v1"
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "type": "get",
+    "url": "/api/v1/countries",
+    "title": "Get list of all countries",
+    "version": "0.1.0",
+    "name": "IndexCountries",
+    "group": "Countries",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "code",
+            "description": "<p>Código 0 conforme todo ha ido bien.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Bool",
+            "optional": false,
+            "field": "true/false",
+            "description": "<p>True o false dependiendo del resultado.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n   \"message\": \"Countries list\",\n   \"data\": [\n     {\n       \"id\": 1,\n       \"code\": \"PE\",\n       \"name\": \"Perú\"\n     },\n     {\n       \"id\": 2,\n       \"code\": \"VE\",\n       \"name\": \"Venezuela\"\n     },\n     {\n       \"id\": 3,\n       \"code\": \"EC\",\n       \"name\": \"Ecuador\"\n     }\n   ],\n   \"status\": true,\n   \"code\": 202\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "CountriesNotFound",
+            "description": "<p>No countries found.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"error\": \"Error countries found\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/CountryController.php",
+    "groupTitle": "Countries"
+  }
+]

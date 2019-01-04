@@ -21,4 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/docs', 'Api\DocumentationController@index')->name('docs');
 
-Route::get('/doc/{doc}', 'Api\DocumentationController@show')->name('doc');
+//Route::get('/doc/{doc}', 'Api\DocumentationController@show')->name('doc');
